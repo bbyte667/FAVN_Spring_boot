@@ -9,21 +9,6 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class InstagramService {
 
-//    private final WebClient webClient = WebClient.create();
-//
-//    public Mono<String> getAccessToken(@RegisteredOAuth2AuthorizedClient("instagram") OAuth2AuthorizedClient authorizedClient) {
-//        OAuth2AccessToken accessToken = authorizedClient.getAccessToken();
-//        return Mono.just(accessToken.getTokenValue());
-//    }
-//
-//    public Mono<String> getFollowersList(String accessToken) {
-//        String url = "https://graph.instagram.com/me/followers?access_token=" + accessToken;
-//        return webClient.get()
-//                .uri(url)
-//                .retrieve()
-//                .bodyToMono(String.class);
-//    }
-
     private final RestTemplate restTemplate = new RestTemplate();
 
     public String getAccessToken(@RegisteredOAuth2AuthorizedClient("instagram") OAuth2AuthorizedClient authorizedClient) {
