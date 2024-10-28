@@ -20,4 +20,9 @@ public class InstagramService {
         String url = "https://graph.instagram.com/me/followers?access_token=" + accessToken;
         return restTemplate.getForObject(url, String.class);
     }
+
+    public String getFollowersList1(String accessToken) {
+        String url = "https://graph.instagram.com/me?fields=id,username,media_count,account_type,media&access_token=" + accessToken;
+        return restTemplate.getForObject(url, String.class);
+    }
 }

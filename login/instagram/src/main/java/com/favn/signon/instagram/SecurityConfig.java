@@ -35,7 +35,7 @@ public class SecurityConfig{
                 )
                 .oauth2Login(oauth2Login ->
                         oauth2Login
-                                .defaultSuccessUrl("/home", true)
+                                .defaultSuccessUrl("/", true)
                                 .tokenEndpoint(tokenEndpoint ->
                                 tokenEndpoint.accessTokenResponseClient(tokenResponseClient)
                         )

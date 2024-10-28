@@ -21,8 +21,10 @@ public class OAuthController {
 
     @GetMapping("/instagram-data")
     public String getInstagramData(@RegisteredOAuth2AuthorizedClient("instagram") OAuth2AuthorizedClient authorizedClient) {
+
+
         String accessToken = instagramService.getAccessToken(authorizedClient);
-        String followersList = instagramService.getFollowersList(accessToken);
+        String followersList = instagramService.getFollowersList1(accessToken);
         return "{ \"access_token\": \"" + accessToken + "\", \"followers\": " + followersList + " }";
     }
 
